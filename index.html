@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert formatted Word quizzes to Canvas-compatible QTI ZIP files entirely in your browser.">
+    <title>QuizCraft — Word to Canvas QTI</title>
+    <script type="module" crossorigin src="/assets/index-DTFXA1f8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DkwsgraE.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="QuizCraft home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 3.75h9.5L19 7.3v12.95H6z"/><path d="M15.5 3.75V7.3H19M9 11h7M9 14h7M9 17h4"/></svg>
+        </span>
+        <span>QuizCraft</span>
+      </a>
+      <div class="privacy-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 19 6v5.3c0 4.5-2.8 7.8-7 9.2-4.2-1.4-7-4.7-7-9.2V6z"/><path d="m9 12 2 2 4-4"/></svg>
+        Private by design
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow"><span></span> Canvas quiz converter</div>
+        <h1>Turn a Word document into a <em>Canvas quiz.</em></h1>
+        <p class="hero-copy">Drop in a properly formatted <strong>.docx</strong> file. QuizCraft reads it locally and creates a Canvas-ready QTI package—without your questions ever leaving this device.</p>
+        <div class="trust-row" aria-label="Product benefits">
+          <span><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>No account</span>
+          <span><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>No uploads</span>
+          <span><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Canvas-ready ZIP</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-labelledby="converter-title">
+        <div class="converter-card">
+          <div class="card-heading">
+            <div>
+              <p class="step-label">Step 1</p>
+              <h2 id="converter-title">Choose your Word quiz</h2>
+            </div>
+            <button class="button button-secondary compact" id="convert-all" type="button" hidden>Convert all</button>
+          </div>
+
+          <input id="file-input" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple hidden>
+          <label class="drop-zone" id="drop-zone" for="file-input">
+            <span class="upload-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 16V5m0 0L8 9m4-4 4 4"/><path d="M5 14v4.5h14V14"/></svg>
+            </span>
+            <strong>Drop your .docx file here</strong>
+            <span>or click to browse from your computer</span>
+            <span class="button button-primary fake-button">Choose Word file</span>
+            <small>Multiple files are supported</small>
+          </label>
+
+          <div id="file-list" class="file-list" aria-live="polite"></div>
+        </div>
+
+        <aside class="quick-guide" aria-labelledby="quick-guide-title">
+          <p class="step-label">Before you convert</p>
+          <h2 id="quick-guide-title">A quick format check</h2>
+          <ol>
+            <li><span>1</span><div><strong>Number each question</strong><small>Use Word’s numbered list: 1., 2., 3.…</small></div></li>
+            <li><span>2</span><div><strong>Letter the answers</strong><small>Use a), b), c) or A., B., C.</small></div></li>
+            <li><span>3</span><div><strong>Mark the correct answer</strong><small>Add <code>!</code> before one correct answer, or use <code>[*]</code> for multiple answers.</small></div></li>
+          </ol>
+          <a class="sample-link" href="/QuizCraft%20Sample%20Quiz.docx" download="QuizCraft Sample Quiz.docx">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14"/></svg>
+            Download the QuizCraft practice template
+          </a>
+        </aside>
+      </section>
+
+      <section class="compatibility-panel" aria-labelledby="compatibility-title">
+        <div class="compatibility-copy">
+          <p class="step-label">Template compatibility</p>
+          <h2 id="compatibility-title">Already using the LSTS Word quiz format?</h2>
+          <p>You can upload the same <strong>.docx</strong> format here. The original <strong>QuizCraft Sample Quiz.docx</strong> practice template uses these conventions and is tested with every conversion.</p>
+          <a href="https://utility.lsts.edu.vn/convert-quiz" target="_blank" rel="noreferrer">View the LSTS converter and format guide <span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="compatibility-list">
+          <li><span aria-hidden="true">✓</span><div><strong>Questions and choices</strong><small>Word numbered lists for questions and lettered lists such as a), b), c) or A., B., C. for choices.</small></div></li>
+          <li><span aria-hidden="true">✓</span><div><strong>The same answer markers</strong><small>Use <code>!</code> for one correct choice, or <code>[*]</code> and <code>[ ]</code> for multiple-answer questions.</small></div></li>
+          <li><span aria-hidden="true">✓</span><div><strong>Rich Word content</strong><small>Embedded images, Microsoft Equation content, tables, and common text formatting are preserved.</small></div></li>
+          <li><span aria-hidden="true">✓</span><div><strong>Template extensions</strong><small>Groups, points, titles, feedback, numerical and short answers, essays, and file-upload questions are also supported.</small></div></li>
+        </ul>
+      </section>
+
+      <section class="how-it-works" aria-labelledby="how-title">
+        <div class="section-heading">
+          <p class="step-label">Simple from start to finish</p>
+          <h2 id="how-title">Three steps to a better quiz workflow</h2>
+        </div>
+        <div class="steps-grid">
+          <article><span class="large-number">01</span><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M6 3.5h9l3 3v14H6z"/><path d="M15 3.5v3h3M9 11h6M9 15h6"/></svg></div><h3>Format in Word</h3><p>Write naturally with numbered questions, lettered answers, images, equations, and tables.</p></article>
+          <article><span class="large-number">02</span><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M12 16V5m0 0L8 9m4-4 4 4"/><path d="M5 14v4.5h14V14"/></svg></div><h3>Convert locally</h3><p>QuizCraft checks the structure and packages every question right here in your browser.</p></article>
+          <article><span class="large-number">03</span><div class="step-icon"><svg viewBox="0 0 24 24"><path d="m8 12 3 3 5-6"/><circle cx="12" cy="12" r="8.5"/></svg></div><h3>Import into Canvas</h3><p>In Canvas, choose Settings → Import Course Content → QTI .zip file.</p></article>
+        </div>
+      </section>
+
+      <section class="format-reference" aria-labelledby="reference-title">
+        <div class="section-heading">
+          <p class="step-label">Format reference</p>
+          <h2 id="reference-title">Question types QuizCraft understands</h2>
+          <p>These markers match the included Word template.</p>
+        </div>
+        <div class="reference-grid">
+          <article><span class="type-dot blue"></span><h3>Single choice</h3><code>a. !Correct answer</code><code>b. Other answer</code></article>
+          <article><span class="type-dot mint"></span><h3>Multiple answers</h3><code>[*] Correct answer</code><code>[ ] Other answer</code></article>
+          <article><span class="type-dot gold"></span><h3>Short answer</h3><code>* Accepted answer 1</code><code>* Accepted answer 2</code><p>Every <code>*</code> line is accepted as correct. A student only needs to enter one of them, and capitalization is ignored.</p></article>
+          <article><span class="type-dot coral"></span><h3>Numerical</h3><code>= 3.14 +- 0.01</code><code>= [3.13, 3.15]</code></article>
+          <article><span class="type-dot violet"></span><h3>Essay</h3><code>____</code><p>Four or more underscores.</p></article>
+          <article><span class="type-dot slate"></span><h3>File upload</h3><code>^^^^</code><p>Four or more carets.</p></article>
+        </div>
+        <aside class="image-help" aria-labelledby="image-help-title">
+          <span class="image-help-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m5.5 17 4.2-4.2 3.1 3 2.2-2.2 3.5 3.4"/></svg></span>
+          <div>
+            <h3 id="image-help-title">Adding images</h3>
+            <p>Use Word’s <strong>Insert → Pictures</strong> command and place the image directly in the question. QuizCraft preserves its displayed size and alternative text, then packages the image inside the QTI ZIP.</p>
+            <p>PNG, JPEG, GIF, WebP, SVG, TIFF, and BMP files are supported. Embed the file in the document—images linked from a website or another file are not included.</p>
+          </div>
+        </aside>
+        <p class="advanced-note"><strong>Also supported:</strong> <code>GROUP</code> / <code>END_GROUP</code> item banks, per-question points and titles, answer feedback, equations, images, and tables.</p>
+      </section>
+
+      <section class="privacy-panel">
+        <div class="privacy-lock"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v2"/></svg></div>
+        <div><p class="step-label">Your work stays yours</p><h2>Nothing is sent to a server.</h2><p>The document is read, converted, and downloaded locally by JavaScript. Refreshing the page clears it from this tool.</p></div>
+      </section>
+    </main>
+
+    <footer><span>QuizCraft</span><p>Built for instructors who would rather spend time teaching.</p></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+
+Detailed Formatting Guide
+
+    Questions: Use Numbered List (1., 2....)
+    Correct Answer (Single): Add an exclamation mark ! right before the letter (e.g., A. !1234)
+    Correct Answer (Multiple): Use [*] for correct, [ ] for incorrect options.
+    Supports Math equations (Microsoft Equation), images, and tables.
+
+
